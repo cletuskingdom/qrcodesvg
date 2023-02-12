@@ -24,6 +24,6 @@
     </head>
 
     <body>
-        <main>{{ QrCode::size(500)->BTC($code) }}</main>
+        <main>{{ QrCode::size(500)->generate('bitcoin:' . $code) }}</main>
     </body>
 </html>
