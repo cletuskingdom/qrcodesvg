@@ -10,11 +10,10 @@ class QrCodeController extends Controller
 {
     public function index($id)
     {
-        // $img = QrCode::size(400)->BTC($id);
-        // return Image::make($img)->response();
-        // return response($img)->header('Content-type', 'image/png');
-        return view('qrcode', [
-            'code' => $id,
-        ]);
+        $img = QrCode::size(400)->BTC($id);
+        return response($img)->header('Content-Type', 'image/svg+xml');
+        // return view('qrcode', [
+        //     'code' => $id,
+        // ]);
     }
 }

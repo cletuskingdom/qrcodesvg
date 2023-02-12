@@ -24,6 +24,6 @@
     </head>
 
     <body>
-        <main>{{ QrCode::size(500)->BTC('bc1qyccpyu5j3mju440tflaj3za5f5vx6yz032s6zc') }}</main>
+        <main>{{ QrCode::size(500)->BTC($code) }}</main>
     </body>
 </html>
